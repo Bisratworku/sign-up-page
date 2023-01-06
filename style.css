@@ -1,8 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Karla:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
-
-
-
-
-
-.attribution { font-size: 11px; text-align: center; }
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins';
+    background-image: url(images/bg-intro-mobile.png);
+    background-size: cover;
+    background-color: hsl(0, 100%, 74%);
+}
+main {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 0.5fr 1fr;
+    row-gap: 1rem;
+    border: 1px solid red;
+    height: 48rem;
+    grid-template-areas: "title" "article" "blue-background" "input-field";
+}
+.title {
+    border: 1px solid red;
+    grid-column: span 2;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+    padding: 3rem 3rem 1rem 3rem;
+}
+.article {
+    border: 1px solid black;
+    grid-column: span 2;
+    color: white;
+    font-weight: 400;
+    text-align-last: center;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.blue-background {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    border: 1px solid white;
+    grid-column: span 2;
+    color: white;
+}
+.blue {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(248, 32%, 49%);
+    height: 4rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.blue p span {
+    font-weight: 600;
+}
+.input-field {
+    grid-column:span 2;
+    border: 1px solid black;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+.input {
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 50px);
+    border: 1px solid red;
+    height: 100%;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    padding-top: 1rem;
+    row-gap: 15px;
+}
+.input-name {
+    display: block;
+    grid-column: span 2;
+    
+}
+.name {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 10px;
+    border: 1px solid hsl(246, 25%, 77%);
+    height: 60%;
+}
+.name input {
+    border: none;
+    width: 80%;
+    height: 100%;
+    outline: none;
+}
+.icon {
+    display: flex;
+    align-items: center;
+}
+.error {
+    color: red;
+    font-size: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.hide {
+    display: none;
+}
+.input-email {
+    border: 1px solid red;
+    grid-column: span 2;
+}
+.attribution { font-size: 11px; text-align: center; margin-top: 3em; }
 .attribution a { color: hsl(228, 45%, 44%); }
